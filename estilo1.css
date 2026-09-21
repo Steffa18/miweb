@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 35px 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+header hr {
+    width: 80%;
+    margin: auto;
+    border: none;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav li {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav li:hover {
+    background: white;
+    color: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.padre {
+    width: 92%;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.hijo1,
+.hijo2,
+.hijo3 {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.hijo1 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hijo2 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hijo3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nieto1,
+.nieto2,
+.nieto3 {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.1);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+.nieto1:hover,
+.nieto2:hover,
+.nieto3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+p {
+    color: #475569;
+    font-size: 15px;
+}
+
+/* =========================
+   IMAGENES
+========================= */
+
+.nieto1 > img,
+.nieto2 > img,
+.nieto3 > img:first-of-type {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.nieto1:hover > img,
+.nieto2:hover > img,
+.nieto3:hover > img:first-of-type {
+    transform: scale(1.03);
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.nieto3:has(img:nth-of-type(2)) {
+    display: flex;
+    flex-direction: column;
+}
+
+.nieto3:has(img:nth-of-type(2)) img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nieto3:has(img:nth-of-type(2)) img:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.pie {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* =========================
+   ANIMACION DE TARJETAS
+========================= */
+
+.nieto1,
+.nieto2,
+.nieto3 {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.nieto1.visible,
+.nieto2.visible,
+.nieto3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   BOTON VOLVER ARRIBA
+========================= */
+
+#btnArriba {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+#btnArriba:hover {
+    background: #1e40af;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+    .hijo2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hijo1,
+    .hijo3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        width: 90%;
+    }
+
+    .hijo1,
+    .hijo2,
+    .hijo3 {
+        grid-template-columns: 1fr;
+    }
+
+    .padre {
+        width: 94%;
+    }
+
+    .nieto1 > img,
+    .nieto2 > img,
+    .nieto3 > img:first-of-type {
+        height: 230px;
+    }
+}

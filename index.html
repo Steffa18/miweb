@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web - Soluciones Digitales</title>
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Título principal con animación y efecto interactivo -->
+            <h1 class="titulo-animado">
+                <span id="texto-escrito"></span><span class="cursor">|</span>
+            </h1>
+
+            <!-- Botón interactivo para cambio de tema -->
+            <button id="btn-theme" class="btn-theme">🌙 Modo Oscuro</button>
+        </div>
+        <hr class="divider">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="quienes.html">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html">Nuestros Productos</a></li>
+                <li><a href="https://listado.mercadolibre.com.pe/">Sucursales</a></li>
+                <li><a href="https://www.facebook.com/">Redes Sociales</a></li>
+                <li><a href="https://www.senati.edu.pe/">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        <section id="productos" class="services-section">
+            <h2 class="section-title">Nuestras Áreas de Especialización</h2>
+
+            <div class="cards-grid">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="fotos/imagen1.avif" alt="Marketing Digital" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500'">
+                    </div>
+                    <div class="card-content">
+                        <h3>Marketing Digital</h3>
+                        <p>Estrategias avanzadas para posicionar tu marca en entornos digitales, optimización SEO, campañas publicitarias y métricas clave para potenciar tu alcance.</p>
+                        <button class="btn-card">Saber más</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="fotos/imagen2.avif" alt="Comercio Electrónico" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67568d0d9f?w=500'">
+                    </div>
+                    <div class="card-content">
+                        <h3>Comercio Electrónico</h3>
+                        <p>Desarrollo de tiendas virtuales robustas, integraciones de pasarelas de pago seguras y optimización de experiencia de usuario para elevar tus ventas.</p>
+                        <button class="btn-card">Saber más</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="fotos/imagne5.jpg" alt="Inteligencia Artificial" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780efad99a?w=500'">
+                    </div>
+                    <div class="card-content">
+                        <h3>Inteligencia Artificial (IA)</h3>
+                        <p>Integración de herramientas inteligentes, automatización de procesos clave, modelos adaptativos y analítica predictiva aplicada a la industria.</p>
+                        <button class="btn-card">Saber más</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>&copy; 2026 Todos los Derechos Reservados | Sitio Web en Desarrollo</p>
+    </footer>
+
+    <!-- Vinculación del archivo JavaScript -->
+    <script src="dinamica1.js"></script>
+</body>
+</html>
