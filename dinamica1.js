@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // 1. EFECTO DE ESCRITURA DINÁMICA EN EL H1
     // ==========================================
-    const textoCompleto = "Mi Página Web en Construcción";
+    const textoCompleto = "Venta de Productos Digitales";
     const elementoTexto = document.getElementById("texto-escrito");
     let indice = 0;
     const velocidadEscritura = 80; // Milisegundos por letra
